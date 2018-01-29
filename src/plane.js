@@ -7,7 +7,10 @@ Plane.prototype.land = function (airport) {
   this.status = 'Landed';
 };
 
-
+Plane.prototype.takeOff = function () {
+  this.airportName = '';
+  this.status = 'Flying';
+};
 
 Plane.prototype.status = function () {
   return status;
