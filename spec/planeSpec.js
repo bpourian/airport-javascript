@@ -9,7 +9,7 @@ describe('Plane', function () {
       plane.land(airport);
   });
 
-  describe('Plane landing', function () {
+  describe('Landing', function () {
     it('Plane should have status landed', function () {
       expect(plane.status).toEqual('Landed');
     });
@@ -19,7 +19,7 @@ describe('Plane', function () {
     });
   });
 
-  describe('Plane take-off', function () {
+  describe('Take-off', function () {
     it('Plane should have status flying', function functionName() {
       expect(plane.status).toEqual('Landed');
       plane.takeOff();
