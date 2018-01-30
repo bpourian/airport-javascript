@@ -1,5 +1,5 @@
 function Airport() {
-
+  this.hanger = [];
 }
 
 Airport.prototype.land = function (plane) {
@@ -20,12 +20,11 @@ Airport.prototype.permisionToLand = function (weather , plane) {
   if (weather) {
     throw new Error('Stormy weather unable to land.');
   } else {
-    this.hanger(plane);
+    this.addToHanger(plane);
     return 'Plane landed';
   }
 };
 
-Airport.prototype.hanger = function (plane) {
-  //needs to store plane in array
-  //var hanger += {plane};
+Airport.prototype.addToHanger = function (plane) {
+  this.hanger.push(plane);
 };

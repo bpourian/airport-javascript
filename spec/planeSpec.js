@@ -11,27 +11,28 @@ describe('Plane', function () {
 
   describe('Landing', function () {
     it('Plane should have status landed', function () {
-      expect(plane.status).toEqual('Landed');
+      expect(plane.landed).toEqual(true);
     });
 
     it('Should store airport details', function functionName() {
-      expect(plane.airportName).toEqual(airport);
+      expect(plane.airportName).toEqual('Heathrow');
     });
   });
 
   describe('Take-off', function () {
     it('Plane should have status flying', function functionName() {
-      expect(plane.status).toEqual('Landed');
+      expect(plane.landed).toEqual(true);
       plane.takeOff();
-      expect(plane.status).toEqual('Flying');
+
+      expect(plane.landed).toEqual(false);
     });
 
     it('Plane should have airport details empty', function functionName() {
-      expect(plane.status).toEqual('Landed');
+      expect(plane.landed).toEqual(true);
       plane.takeOff();
+      
       expect(plane.airportName).toEqual('');
     });
-
   });
 
 });
